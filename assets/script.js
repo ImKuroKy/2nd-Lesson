@@ -7,6 +7,7 @@ while (running == true)
     {
         case "1":
             {
+                document.write("<H3>Задание 1</H3>")
                 counter++
 
                 var A = parseInt(prompt("Введите нижнюю границу промежутка","сюда"));
@@ -14,7 +15,7 @@ while (running == true)
 
                 document.write("Нижняя граница: " + A + "<br />");
                 document.write("Верхняя граница:" + B + "<br />");
-                
+
                 var point = A;
                 var sum = 0;
                 var negative = "";
@@ -37,7 +38,30 @@ while (running == true)
             break;
         case "2":
             {
-                document.write("В разработке");
+                document.write("<H3>Задание 2</H3>")
+                var product_name = prompt("Введите название товара для доставки", "сюда");
+                var delivery_breaks = parseInt(prompt("Введите количество промежуточных остановок для доставки", "сюда"));
+
+                
+                document.write("Название товара: " + product_name + "<br />");
+                document.write("Количество промежуточных точек: " + delivery_breaks + "<br />");
+
+                var result = 1;
+                do
+                {
+                    if (delivery_breaks > 1)
+                    {
+                        result *= delivery_breaks--
+                    }
+                }
+                while (delivery_breaks > 1)
+
+                document.write("Возможных путей доставки " + product_name + ": " + result);
+            };
+            break;
+        case "3":
+            {
+                
             };
             break;
         default:
