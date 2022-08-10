@@ -56,12 +56,44 @@ while (running == true)
                 }
                 while (delivery_breaks > 1)
 
-                document.write("Возможных путей доставки " + product_name + ": " + result);
+                document.write("Возможных путей доставки " + product_name + ": " + result + "<br />");
             };
             break;
         case "3":
             {
+                document.write("<H3>Задание 3</H3>" + "<br />");
+                // Пробел - &nbsp
+                document.write("Прямоугольник:" + "<br />");
+                for (var i = 0; i < 6; i++)
+                {
+                    if (i < 1 || i > 4)
+                    {
+                        document.write("##########" + "<br />");
+                    }
+                    else
+                    {
+                        document.write("#&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp#" + "<br />");
+                    };
+                };
                 
+                document.write("Прямоугольный треугольник" + "<br />");
+                for (var i = 0; i < 16; i++)
+                {
+                    var space = '&nbsp&nbsp';
+                    if (i == 0)
+                    {
+                        document.write("#" + "<br />");
+                    }
+                    else if (i == 15)
+                    {
+                        document.write("################" + "<br />");
+                    }
+                    else
+                    {
+                        var mySpace = new Array(i).join(space);
+                        document.write("#" + mySpace + "#<br />");
+                    };
+                }
             };
             break;
         default:
